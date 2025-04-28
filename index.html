@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZenTop Offboarding Message Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 2rem;
+            background-color: #f0f0f5;
+        }
+        img {
+            width: 300px;
+            margin-bottom: 20px;
+        }
+        button {
+            font-size: 1.2rem;
+            padding: 10px 20px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 8px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #message {
+            margin-top: 30px;
+            font-size: 1.2rem;
+            color: #333;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <img src="https://images.squarespace-cdn.com/content/v1/663d025d09b7434f1c953df0/fd820eb7-1862-4b05-853e-c3abecabb6d5/ZenTop_full+logo.png?format=1500w" alt="ZenTop Logo">
+
+    <h1>ZenTop Offboarding Message Generator</h1>
+
+    <button onclick="generateMessage()">Generate Offboarding Message</button>
+
+    <div id="message"></div>
+
+    <script>
+        const messages = [
+            "[Ticket Note] User has been offboarded with all necessary drama and none of the tears. Accounts disabled, access revoked, and one solemn nod given in their general direction.",
+            "[Ticket Note] User access terminated. Laptop liberated from its corporate shackles. We wish it well in its next life as a doorstop or YouTube streaming device.",
+            "[Ticket Note] Credentials revoked, licenses freed, and access uninvited. User's files now roam free in archival purgatory. No user was harmed during this procedure (we think).",
+            "[Ticket Note] User successfully offboarded. Final Teams message sent ('Peace out ✌️'), mailbox preserved, and IT has respectfully refrained from making jokes about their inbox size... mostly.",
+            "[Ticket Note] All systems go: access revoked, devices collected, spirits lifted. If found wandering near printer rooms, please redirect to nearest exit.",
+            "[Ticket Note] Completed offboarding checklist: disabled account, removed group memberships, confiscated questionable desktop backgrounds. Another glorious victory for IT.",
+            "[Ticket Note] Offboarding complete. User's AD account sent off with a Viking funeral (but with less fire). All access is revoked, licenses reassigned to someone marginally more grateful.",
+            "[Ticket Note] User access terminated with extreme prejudice (and a little confetti). Devices locked down, mailbox archived, karma mostly intact.",
+            "[Ticket Note] Deactivation successful. User's workstation is being prepared for the next unsuspecting soul. No haunting reported... yet.",
+            "[Ticket Note] All access revoked. Laptop repossessed. Spirit of IT vengeance appeased. May their next tech support call be someone else's problem."
+        ];
+
+        function generateMessage() {
+            const randomIndex = Math.floor(Math.random() * messages.length);
+            document.getElementById('message').innerText = messages[randomIndex];
+        }
+    </script>
+
+</body>
+</html>
