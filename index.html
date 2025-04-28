@@ -44,7 +44,7 @@
 
     <h1>ZenTop Offboarding Message Generator</h1>
 
-    <button onclick="generateMessage()">Generate Offboarding Message</button>
+    <button id="generateButton">Generate Offboarding Message</button>
 
     <div id="message"></div>
 
@@ -62,10 +62,15 @@
             "[Ticket Note] All access revoked. Laptop repossessed. Spirit of IT vengeance appeased. May their next tech support call be someone else's problem."
         ];
 
-        function generateMessage() {
-            const randomIndex = Math.floor(Math.random() * messages.length);
-            document.getElementById('message').innerText = messages[randomIndex];
-        }
+        document.addEventListener('DOMContentLoaded', function() {
+            const button = document.getElementById('generateButton');
+            const messageDiv = document.getElementById('message');
+
+            button.addEventListener('click', function() {
+                const randomIndex = Math.floor(Math.random() * messages.length);
+                messageDiv.innerText = messages[randomIndex];
+            });
+        });
     </script>
 
 </body>
